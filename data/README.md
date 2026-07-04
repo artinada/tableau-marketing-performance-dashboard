@@ -2,20 +2,13 @@
 
 This directory contains the analytical dataset used to build the Tableau dashboard.
 
-## Dataset
+## Final Dataset
 
 **marketing_ads_dataset.csv**
 
-The dataset was generated from the PostgreSQL database `ads_analysis_goit_course` after preparing and combining advertising data from multiple source tables.
+This dataset was generated from the PostgreSQL database `ads_analysis_goit_course` after preparing and combining advertising data from multiple source tables.
 
-The data preparation process included:
-
-* joining Facebook Ads data with campaign and ad set lookup tables;
-* combining Facebook Ads and Google Ads into a single dataset;
-* replacing missing values using `COALESCE`;
-* decoding UTM campaign parameters;
-* calculating aggregated marketing metrics;
-* exporting the final result to CSV for Tableau Public.
+The data preparation process description: `/docs/data_preparation.md`
 
 ## Data Sources
 
@@ -26,21 +19,7 @@ The original dataset was created from the following database tables:
 * `facebook_adset`
 * `google_ads_basic_daily`
 
-## Main Fields
-
-The exported dataset contains:
-
-* `ad_date`
-* `source`
-* `campaign_name`
-* `adset_name`
-* `utm_campaign`
-* `total_spend`
-* `total_impressions`
-* `total_reach`
-* `total_clicks`
-* `total_leads`
-* `total_value`
+Facebook campaign and adset names were joined from lookup tables using `campaign_id` and `adset_id`. Google Ads data already contained campaign and audience segment names.
 
 ## Notes
 
