@@ -6,7 +6,6 @@ The dashboard was designed to provide executives with a single-page overview of 
 
 The layout follows a top-down analytical flow.
 
----
 
 ## KPI Section
 
@@ -24,23 +23,43 @@ Top row contains high-level KPIs:
 
 ---
 
-## Main Visualizations
+### Main Analytical Section
 
-### Spend vs Leads
+The central part of the dashboard includes four main visualizations.
 
-Tracks advertising investment and lead generation.
+#### 1. Spend vs Leads Analysis
 
-### Metric Trend
+A dual-axis chart showing:
 
-Compares marketing metrics across advertising platforms.
+* monthly advertising spend;
+* monthly number of leads;
+* correlation between monthly spend and leads.
 
-### Campaign Ranking
+This chart helps evaluate whether increased advertising budget is associated with increased lead generation.
 
-Ranks campaigns using a dynamic parameter.
+#### 2. Metric Trend
 
-### Campaign Efficiency
+A line chart showing how the selected marketing metric changes over time for Facebook and Google.
 
-Analyzes the relationship between budget and campaign efficiency.
+This allows direct comparison of advertising platforms.
+
+#### 3. Campaign Ranking
+
+A horizontal bar chart ranking campaigns by the selected metric.
+
+Campaigns are sorted in descending order to quickly identify top-performing campaigns.
+
+#### 4. Campaign Efficiency Analysis
+
+A scatter plot showing the relationship between advertising spend and campaign efficiency.
+
+Chart logic:
+
+* each point represents one campaign;
+* X-axis: advertising spend;
+* Y-axis: selected metric;
+* color: advertising source;
+* size: number of leads.
 
 ---
 
@@ -53,23 +72,23 @@ The dashboard includes:
 - campaign drill analysis
 - cross-filtering
 
----
+When a user clicks a campaign in the `Campaign Efficiency Analysis` scatter plot, the following charts are filtered by the selected campaign:
 
-## User Workflow
+* `Metric Trend`
+* `Spend vs Leads Analysis`
 
-1. Review KPIs
-2. Observe monthly trends
-3. Compare Facebook vs Google
-4. Identify top campaigns
-5. Select a campaign
-6. Analyze detailed performance
+The action uses `campaign_name` as the selected field for filtering.
 
 ---
 
-## Filters
+## Dashboard Filters
 
-- Date
-- Source
-- Campaign
-- Ad Set
-- UTM Campaign
+The dashboard includes the following filters:
+
+* date period;
+* source;
+* campaign name;
+* adset name / audience segment;
+* UTM campaign.
+
+The date filter is displayed by month.
