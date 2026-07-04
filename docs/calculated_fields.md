@@ -73,6 +73,33 @@ SUM([Leads])
 
 ---
 
+## Parameter: Select Metric
+
+The dashboard includes a parameter called `Select Metric`, which allows users to switch dynamically between marketing metrics.
+
+Available metric options:
+
+* CTR
+* CPC
+* CPL
+* ROMI
+* Clicks to Leads Conversion
+* Reach to Leads Conversion
+
+The parameter is connected to the calculated field `Selected Metric`.
+
+```tableau
+CASE [Select Metric]
+WHEN "CTR" THEN [CTR]
+WHEN "CPC" THEN [CPC]
+WHEN "CPL" THEN [CPL]
+WHEN "ROMI" THEN [ROMI]
+WHEN "Clicks to Leads Conversion" THEN [Clicks to Leads Conversion]
+WHEN "Reach to Leads Conversion" THEN [Reach to Leads Conversion]
+END
+```
+
+
 ## Correlation
 
 CORR([monthly_spend],
