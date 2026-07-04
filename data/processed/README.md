@@ -10,17 +10,7 @@ The dataset was created by transforming and combining multiple advertising data 
 
 This file contains the consolidated marketing dataset prepared for business intelligence and visualization.
 
-## Data Preparation
-
-The dataset was generated through the following steps:
-
-* joined Facebook Ads data with campaign and ad set lookup tables;
-* combined Facebook Ads and Google Ads into a unified dataset using `UNION ALL`;
-* replaced missing values with `COALESCE`;
-* decoded UTM campaign parameters for marketing attribution analysis;
-* standardized column names across advertising platforms;
-* aggregated key marketing metrics;
-* exported the result to CSV for Tableau Public.
+The data preparation process description: /docs/data_preparation.md
 
 ## Included Fields
 
