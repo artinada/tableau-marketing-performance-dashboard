@@ -73,7 +73,14 @@ SUM([Leads])
 
 ---
 
-## Parameter: Select Metric
+## Correlation
+
+CORR([monthly_spend],
+[monthly_leads])
+
+---
+
+# Parameter: Select Metric
 
 The dashboard includes a parameter called `Select Metric`, which allows users to switch dynamically between marketing metrics.
 
@@ -98,9 +105,3 @@ WHEN "Clicks to Leads Conversion" THEN [Clicks to Leads Conversion]
 WHEN "Reach to Leads Conversion" THEN [Reach to Leads Conversion]
 END
 ```
-
-
-## Correlation
-
-CORR([monthly_spend],
-[monthly_leads])
