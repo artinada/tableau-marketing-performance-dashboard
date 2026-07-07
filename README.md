@@ -15,9 +15,7 @@ The final dashboard helps analyze advertising efficiency, campaign performance, 
 
 ## Dashboard Screenshot
 
-Dashboard Preview
-
-< Add a dashboard screenshot here >   /tableau/screenshots/marketing_dashboard_overview.png
+Dashboard Preview see here  /tableau/screenshots/marketing_dashboard_overview.png
 
 ## Business Questions
 
@@ -37,9 +35,7 @@ The dashboard is designed to answer the following business questions:
 ## Tech Stack
 
 ### Database
-
 * PostgreSQL
-
 ### Querying & Data Preparation
 * SQL
 * DBeaver
